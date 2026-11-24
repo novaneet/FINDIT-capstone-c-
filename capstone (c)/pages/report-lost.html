@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report Lost Item | FINDIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body data-page="report-lost">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="../index.html" class="brand"><span class="brand-mark">F</span><span>FINDIT</span></a>
+        <nav class="main-nav">
+          <a href="../index.html" class="nav-link">Home</a>
+          <a href="browse.html" class="nav-link">Browse Items</a>
+          <a href="report-lost.html" class="nav-link active">Report Lost</a>
+          <a href="report-found.html" class="nav-link">Report Found</a>
+          <a href="login.html" class="nav-link">Login/Profile</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell section-pad">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Lost item report</p>
+          <h1>Report a lost item</h1>
+        </div>
+
+        <form id="loss-form" class="stacked-form">
+          <div class="form-grid two-col">
+            <label>
+              <span>Item name</span>
+              <input type="text" id="item-name" placeholder="Black wallet" required />
+            </label>
+            <label>
+              <span>Category</span>
+              <select id="item-category" required>
+                <option value="">Select category</option>
+                <option>Electronics</option>
+                <option>Wallets and purses</option>
+                <option>Bags</option>
+                <option>Books and stationery</option>
+                <option>ID cards</option>
+                <option>Keys</option>
+                <option>Clothing</option>
+                <option>Accessories</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>
+              <span>Colour</span>
+              <input type="text" id="item-colour" placeholder="Black" required />
+            </label>
+            <label>
+              <span>Last seen location</span>
+              <input type="text" id="item-location" placeholder="Library, cafeteria..." required />
+            </label>
+            <label>
+              <span>Date lost</span>
+              <input type="date" id="item-date" required />
+            </label>
+            <label>
+              <span>Upload photo</span>
+              <input type="file" id="item-image" accept="image/*" />
+            </label>
+          </div>
+
+          <label>
+            <span>Detailed description</span>
+            <textarea id="item-description" placeholder="Describe the item, any stickers, brand, markings, or extra details." required></textarea>
+          </label>
+
+          <div id="image-preview-wrap" class="hidden">
+            <img id="image-preview" class="report-image-preview" alt="Selected item preview" />
+          </div>
+
+          <div class="form-actions">
+            <button type="button" id="review-report" class="btn btn-secondary">Review report</button>
+            <button type="submit" class="btn btn-primary">Submit lost report</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <div id="app-message" class="app-message info"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/items.js"></script>
+  </body>
+</html>

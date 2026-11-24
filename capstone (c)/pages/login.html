@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | FINDIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body data-page="login">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="../index.html" class="brand"><span class="brand-mark">F</span><span>FINDIT</span></a>
+        <nav class="main-nav">
+          <a href="../index.html" class="nav-link">Home</a>
+          <a href="browse.html" class="nav-link">Browse Items</a>
+          <a href="report-lost.html" class="nav-link">Report Lost</a>
+          <a href="report-found.html" class="nav-link">Report Found</a>
+          <a href="login.html" class="nav-link active">Login/Profile</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="auth-shell section-pad">
+      <div class="container auth-grid">
+        <section class="auth-panel">
+          <p class="eyebrow">Welcome back</p>
+          <h1>Login to FINDIT</h1>
+          <form id="login-form" class="stacked-form">
+            <label>
+              <span>Email</span>
+              <input type="email" id="login-email" placeholder="name@college.edu" required />
+            </label>
+            <label>
+              <span>Password</span>
+              <input type="password" id="login-password" placeholder="••••••••" required />
+            </label>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+          <p class="auth-alt-link">Need an account? <a href="register.html">Register here</a></p>
+        </section>
+
+        <section class="auth-panel">
+          <p class="eyebrow">New here?</p>
+          <h2>Create an account</h2>
+          <p class="muted">Join the campus community to report lost items, respond to found belongings, and manage recovery requests.</p>
+          <a href="register.html" class="btn btn-secondary">Go to register</a>
+        </section>
+      </div>
+    </main>
+
+    <div id="app-message" class="app-message info"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/auth.js"></script>
+  </body>
+</html>

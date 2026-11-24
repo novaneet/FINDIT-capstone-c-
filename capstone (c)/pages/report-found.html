@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report Found Item | FINDIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body data-page="report-found">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="../index.html" class="brand"><span class="brand-mark">F</span><span>FINDIT</span></a>
+        <nav class="main-nav">
+          <a href="../index.html" class="nav-link">Home</a>
+          <a href="browse.html" class="nav-link">Browse Items</a>
+          <a href="report-lost.html" class="nav-link">Report Lost</a>
+          <a href="report-found.html" class="nav-link active">Report Found</a>
+          <a href="login.html" class="nav-link">Login/Profile</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell section-pad">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Found item report</p>
+          <h1>Report a found item</h1>
+        </div>
+
+        <form id="found-form" class="stacked-form">
+          <div class="form-grid two-col">
+            <label>
+              <span>Item name</span>
+              <input type="text" id="found-item-name" placeholder="Blue notebook" required />
+            </label>
+            <label>
+              <span>Category</span>
+              <select id="found-item-category" required>
+                <option value="">Select category</option>
+                <option>Electronics</option>
+                <option>Wallets and purses</option>
+                <option>Bags</option>
+                <option>Books and stationery</option>
+                <option>ID cards</option>
+                <option>Keys</option>
+                <option>Clothing</option>
+                <option>Accessories</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>
+              <span>Colour</span>
+              <input type="text" id="found-item-colour" placeholder="Blue" required />
+            </label>
+            <label>
+              <span>Location found</span>
+              <input type="text" id="found-item-location" placeholder="Lecture hall entrance" required />
+            </label>
+            <label>
+              <span>Date found</span>
+              <input type="date" id="found-item-date" required />
+            </label>
+            <label>
+              <span>Upload photo</span>
+              <input type="file" id="found-item-image" accept="image/*" required />
+            </label>
+          </div>
+
+          <label>
+            <span>Description</span>
+            <textarea id="found-item-description" placeholder="Describe what you found and any identifying marks." required></textarea>
+          </label>
+
+          <div id="found-image-preview-wrap" class="hidden">
+            <img id="found-image-preview" class="report-image-preview" alt="Selected found item preview" />
+          </div>
+
+          <div class="form-actions">
+            <button type="button" id="review-found-report" class="btn btn-secondary">Review report</button>
+            <button type="submit" class="btn btn-primary">Submit found report</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <div id="app-message" class="app-message info"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/items.js"></script>
+  </body>
+</html>

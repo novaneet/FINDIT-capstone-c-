@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item Details | FINDIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body data-page="item-details">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="../index.html" class="brand"><span class="brand-mark">F</span><span>FINDIT</span></a>
+        <nav class="main-nav">
+          <a href="../index.html" class="nav-link">Home</a>
+          <a href="browse.html" class="nav-link">Browse Items</a>
+          <a href="report-lost.html" class="nav-link">Report Lost</a>
+          <a href="report-found.html" class="nav-link">Report Found</a>
+          <a href="login.html" class="nav-link">Login/Profile</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell section-pad">
+      <div class="container item-detail-layout">
+        <section id="item-detail-content" class="detail-card"></section>
+        <aside class="detail-card">
+          <p class="eyebrow">Claim request</p>
+          <h3>Express interest</h3>
+          <form id="claim-form" class="stacked-form">
+            <label>
+              <span>Verification message</span>
+              <textarea id="claim-verification" placeholder="Briefly explain why you believe this item is yours and provide identifying details only in a private secure message." required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Submit claim request</button>
+          </form>
+        </aside>
+      </div>
+    </main>
+
+    <div id="app-message" class="app-message info"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/claims.js"></script>
+  </body>
+</html>

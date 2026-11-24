@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Items | FINDIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body data-page="browse">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="../index.html" class="brand"><span class="brand-mark">F</span><span>FINDIT</span></a>
+        <nav class="main-nav">
+          <a href="../index.html" class="nav-link">Home</a>
+          <a href="browse.html" class="nav-link active">Browse Items</a>
+          <a href="report-lost.html" class="nav-link">Report Lost</a>
+          <a href="report-found.html" class="nav-link">Report Found</a>
+          <a href="login.html" class="nav-link">Login/Profile</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell section-pad">
+      <div class="container">
+        <div class="section-heading spaced">
+          <p class="eyebrow">Browse</p>
+          <h1>Lost and found listings</h1>
+        </div>
+
+        <form id="browse-filter-form" class="filter-panel">
+          <div class="form-grid search-grid">
+            <label>
+              <span>Report type</span>
+              <select id="filter-type">
+                <option value="">All</option>
+                <option>Lost</option>
+                <option>Found</option>
+              </select>
+            </label>
+            <label>
+              <span>Category</span>
+              <select id="filter-category">
+                <option value="">Any</option>
+                <option>Electronics</option>
+                <option>Wallets and purses</option>
+                <option>Bags</option>
+                <option>Books and stationery</option>
+                <option>ID cards</option>
+                <option>Keys</option>
+                <option>Clothing</option>
+                <option>Accessories</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>
+              <span>Colour</span>
+              <input type="text" id="filter-colour" placeholder="Black" />
+            </label>
+            <label>
+              <span>Location</span>
+              <input type="text" id="filter-location" placeholder="Library" />
+            </label>
+            <label>
+              <span>Keywords</span>
+              <input type="text" id="filter-keywords" placeholder="Sticker, leather..." />
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Apply filters</button>
+            <button type="button" id="clear-filters" class="btn btn-secondary">Clear filters</button>
+          </div>
+        </form>
+
+        <div id="browse-status" class="app-message info hidden"></div>
+        <div id="browse-results" class="listing-grid"></div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/search.js"></script>
+  </body>
+</html>
